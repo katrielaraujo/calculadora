@@ -8,9 +8,9 @@ export default function Button(props){
     }
 
     return (
-        <div
-        className={`button-container ${isOperator(props.children)? 'operator':''}`.trimEnd()}>
+        <button
+        className={`button-container ${isOperator(props.children)? 'operator':''}`.trimEnd()} onClick={() => props.handleClick(props.children)}>
             {props.children}
-        </div>
+        </button>
     );
 }
